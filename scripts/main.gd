@@ -50,7 +50,8 @@ func _on_score_timer_timeout() -> void:
 		spawn_bomb()
 	
 func spawn_bomb():
-	print("Spawn Bomb!")
+	var new_bomb = bomb_scene.instantiate()
+	add_child(new_bomb)
 
 func _on_player_hit() -> void:
 	game_over()
